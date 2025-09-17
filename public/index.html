@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sentra AI Labs - AI Consulting Services</title>
+    <title>Sentra AI - Smart Baby Tracking with Cocoo</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -13,17 +13,36 @@
                         'sans': ['Inter', 'system-ui', 'sans-serif'],
                     },
                     colors: {
-                        'gray': {
-                            50: '#f9fafb',
-                            100: '#f3f4f6',
-                            200: '#e5e7eb',
-                            300: '#d1d5db',
-                            400: '#9ca3af',
-                            500: '#6b7280',
-                            600: '#4b5563',
-                            700: '#374151',
-                            800: '#1f2937',
-                            900: '#111827',
+                        'cream': {
+                            50: '#fefcfb',
+                            100: '#f9f6f1',
+                            200: '#f4eae1',
+                            300: '#f2dcd8',
+                            400: '#dfd5d3',
+                            500: '#bfaca6',
+                            600: '#8b7b75',
+                            700: '#6b5d58',
+                            800: '#4a3e3a',
+                            900: '#2a211e',
+                        },
+                        'pink': {
+                            400: '#f8e0e0',
+                            500: '#e26887',
+                            600: '#d14d6f',
+                        },
+                        'purple': {
+                            300: '#bab8df',
+                        },
+                        'yellow': {
+                            300: '#f1ecc2',
+                            400: '#ebe4a2',
+                        },
+                        'green': {
+                            300: '#d3dabc',
+                            400: '#c6d1a4',
+                        },
+                        'blue': {
+                            200: '#dce8f8',
                         }
                     }
                 }
@@ -33,7 +52,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #f4eae1 0%, #e26887 100%);
+        }
+        
+        .cream-gradient {
+            background: linear-gradient(135deg, #f9f6f1 0%, #f4eae1 50%, #f2dcd8 100%);
         }
         
         .card-hover {
@@ -57,19 +80,22 @@
 </head>
 <body class="bg-gray-50 font-sans">
     <!-- Header -->
-    <header class="bg-white/80 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
+    <header class="bg-cream-100/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-cream-200">
         <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-end items-center h-16">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="assets/cocoo-full-logo.png" alt="Cocoo Logo" class="h-8 w-auto">
+                </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#products" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200">Products</a>
-                        <a href="#logs" class="text-gray-700 hover:text-gray-900 px-3 py-2 text-sm font-medium transition-colors duration-200">Case Studies</a>
-                        <a href="meet-sue.html" class="bg-gray-900 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-800 transition-all duration-200 shadow-lg hover:shadow-xl">Meet Sue</a>
+                        <a href="#features" class="text-cream-700 hover:text-pink-500 px-3 py-2 text-sm font-medium transition-colors duration-200">Features</a>
+                        <a href="#screenshots" class="text-cream-700 hover:text-pink-500 px-3 py-2 text-sm font-medium transition-colors duration-200">App Preview</a>
+                        <a href="#download" class="bg-pink-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-pink-600 transition-all duration-200 shadow-lg hover:shadow-xl">Get the App</a>
                     </div>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden">
-                    <button class="bg-gray-100 inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500">
+                    <button class="bg-cream-200 inline-flex items-center justify-center p-2 rounded-md text-cream-700 hover:text-pink-500 hover:bg-cream-300 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500">
                         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
                         </svg>
@@ -80,73 +106,137 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-gray-50 via-white to-gray-100 py-20 lg:py-32">
+    <section class="cream-gradient py-20 lg:py-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-5xl lg:text-7xl font-bold text-gray-900 mb-8 leading-tight">
-                Sentra AI Labs
+            <div class="mb-8">
+                <img src="assets/cocoo-logo.png" alt="Cocoo Logo" class="w-24 h-24 mx-auto mb-6">
+            </div>
+            <h1 class="text-4xl lg:text-6xl font-bold text-cream-800 mb-4 leading-tight">
+                Sentra AI
             </h1>
-            <p class="text-xl lg:text-2xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-                Hey, I'm Sue. I build AI-powered products and help businesses embed AI—transforming products and services into smarter, faster, and more scalable solutions.
+            <h2 class="text-2xl lg:text-3xl font-semibold text-pink-500 mb-8">
+                Introducing Cocoo
+            </h2>
+            <p class="text-xl lg:text-2xl text-cream-700 mb-12 max-w-4xl mx-auto leading-relaxed">
+                Our flagship mobile app that revolutionizes baby tracking for modern parents. Monitor sleep, feeding, diaper changes, and developmental milestones with expert-generated schedules tailored to your baby's needs.
             </p>
             
-            <div class="mb-12">
-                <img src="assets/profile_photo.JPG" alt="Sue's Profile Photo" 
-                     class="w-80 h-80 lg:w-96 lg:h-96 rounded-3xl object-cover mx-auto shadow-2xl ring-4 ring-white/50">
+            <div class="grid grid-cols-3 gap-8 mb-12 max-w-2xl mx-auto">
+                <div class="text-center">
+                    <img src="assets/baby_sleep.png" alt="Sleep Tracking" class="w-16 h-16 mx-auto mb-2 rounded-xl">
+                    <p class="text-sm text-cream-600 font-medium">Sleep Tracking</p>
+                </div>
+                <div class="text-center">
+                    <img src="assets/baby_breastfeed.png" alt="Feeding Logs" class="w-16 h-16 mx-auto mb-2 rounded-xl">
+                    <p class="text-sm text-cream-600 font-medium">Feeding Logs</p>
+                </div>
+                <div class="text-center">
+                    <img src="assets/wakeup_baby.png" alt="Wake Tracking" class="w-16 h-16 mx-auto mb-2 rounded-xl">
+                    <p class="text-sm text-cream-600 font-medium">Wake Tracking</p>
+                </div>
             </div>
             
-            <a href="https://calendly.com/sueye0425/intro-call-with-sue-ai-projects-consulting" target="_blank"
-               class="inline-flex items-center bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-gray-800 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
-                Book a call
-                <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-            </a>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#download" class="inline-flex items-center bg-pink-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-pink-600 transition-all duration-300 shadow-xl hover:shadow-2xl hover:scale-105">
+                    Get the App
+                    <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8l-8 8-8-8"></path>
+                    </svg>
+                </a>
+                <a href="#features" class="inline-flex items-center bg-white text-pink-500 px-8 py-4 rounded-full text-lg font-semibold border-2 border-pink-500 hover:bg-pink-50 transition-all duration-300 shadow-lg hover:shadow-xl">
+                    Learn More
+                </a>
+            </div>
+            
+            <p class="text-sm text-cream-600 mt-6">
+                <span class="font-semibold text-pink-500">AI-powered solutions</span> for modern families • Currently in development
+            </p>
         </div>
     </section>
 
-    <!-- Products Section -->
-    <section id="products" class="py-20 lg:py-32 bg-gradient-to-br from-gray-50 to-white">
+    <!-- Features Section -->
+    <section id="features" class="py-20 lg:py-32 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">Products</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mx-auto"></div>
+                <h2 class="text-4xl lg:text-6xl font-bold text-cream-800 mb-6">Complete Baby Tracking</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto"></div>
+                <p class="text-xl text-cream-600 mt-6 max-w-3xl mx-auto">Seven essential tracking stickers to monitor every aspect of your baby's daily routine with expert-generated schedules.</p>
             </div>
             
-            <div class="product-card bg-white rounded-3xl shadow-2xl overflow-hidden card-hover border border-gray-200">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-                    <div class="p-8 lg:p-12 flex flex-col justify-center">
-                        <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">TripAIbuddy</h3>
-                        <p class="text-gray-600 mb-4 text-lg leading-relaxed">AI-powered travel companion that plans, personalizes, and optimizes itineraries in real time.</p>
-                        <ul class="space-y-3 mb-8">
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span class="text-gray-600 text-lg">Recommends smart routes and activities based on your preferences and local conditions</span>
-                            </li>
-                            <li class="flex items-start">
-                                <svg class="w-6 h-6 text-green-500 mr-3 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
-                                </svg>
-                                <span class="text-gray-600 text-lg">Adapts plans on the fly using live feedback loops—weather changes, delays, or mood shifts</span>
-                            </li>
-                        </ul>
-                        
-                                                 <div class="flex flex-col sm:flex-row gap-4">
-                             <a href="https://tripaibuddy.app" target="_blank" class="inline-flex items-center justify-center bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-800 transition-all duration-300 shadow-lg hover:shadow-xl">
-                                 Try the App
-                                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
-                                 </svg>
-                             </a>
-                            <a href="#" class="inline-flex items-center justify-center bg-white text-gray-900 px-8 py-3 rounded-full text-lg font-semibold border-2 border-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300 shadow-lg hover:shadow-xl">
-                                Collaborate
-                            </a>
-                        </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                <!-- Sleep Tracking -->
+                <div class="bg-cream-100 rounded-2xl p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-blue-200 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🛌</span>
                     </div>
-                    <div class="overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2035&q=80" 
-                             alt="Travel planning" class="product-image w-full h-full object-cover min-h-[400px]">
+                    <h3 class="text-xl font-bold text-cream-800 mb-2">Sleep & Wake</h3>
+                    <p class="text-cream-600">Track sleep patterns with timeline visualization and wake-up monitoring</p>
+                </div>
+                
+                <!-- Feeding Tracking -->
+                <div class="bg-cream-100 rounded-2xl p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-pink-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🤱</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-cream-800 mb-2">Feeding Logs</h3>
+                    <p class="text-cream-600">Breastfeeding duration (left/right) and formula amount tracking</p>
+                </div>
+                
+                <!-- Diaper Changes -->
+                <div class="bg-cream-100 rounded-2xl p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-yellow-300 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">💧</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-cream-800 mb-2">Diaper Changes</h3>
+                    <p class="text-cream-600">Monitor pee, poop, and combination diaper changes</p>
+                </div>
+                
+                <!-- Expert Templates -->
+                <div class="bg-cream-100 rounded-2xl p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-green-300 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📋</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-cream-800 mb-2">Expert Templates</h3>
+                    <p class="text-cream-600">Age-appropriate schedules for babies 0-24 months</p>
+                </div>
+                
+                <!-- Milestones -->
+                <div class="bg-cream-100 rounded-2xl p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-purple-300 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-cream-800 mb-2">Milestones</h3>
+                    <p class="text-cream-600">Track developmental progress with AAP/WHO standards</p>
+                </div>
+                
+                <!-- Schedule Optimization -->
+                <div class="bg-cream-100 rounded-2xl p-6 text-center card-hover">
+                    <div class="w-16 h-16 bg-pink-400 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">⚡</span>
+                    </div>
+                    <h3 class="text-xl font-bold text-cream-800 mb-2">Smart Analytics</h3>
+                    <p class="text-cream-600">Drift analysis and personalized schedule recommendations</p>
+                </div>
+            </div>
+            
+            <!-- Key Benefits -->
+            <div class="bg-gradient-to-r from-pink-500 to-pink-600 rounded-3xl p-8 lg:p-12 text-center text-white">
+                <h3 class="text-3xl font-bold mb-6">Why Choose Cocoo?</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="text-4xl mb-2">🎯</div>
+                        <h4 class="text-xl font-semibold mb-2">Expert-Driven</h4>
+                        <p class="text-pink-100">Schedules based on pediatric sleep science and developmental guidelines</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl mb-2">📱</div>
+                        <h4 class="text-xl font-semibold mb-2">Simple & Intuitive</h4>
+                        <p class="text-pink-100">Easy-to-use sticker interface designed for tired parents</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl mb-2">🔄</div>
+                        <h4 class="text-xl font-semibold mb-2">Adaptive Learning</h4>
+                        <p class="text-pink-100">Continuously optimizes based on your baby's unique patterns</p>
                     </div>
                 </div>
             </div>
@@ -155,52 +245,213 @@
 
 
 
-    <!-- Logs Section -->
-    <section id="logs" class="py-20 lg:py-32 bg-white">
+    <!-- App Screenshots Section -->
+    <section id="screenshots" class="py-20 lg:py-32 bg-cream-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">Logs</h2>
-                <div class="w-24 h-1 bg-gradient-to-r from-indigo-500 to-purple-600 mx-auto"></div>
+                <h2 class="text-4xl lg:text-6xl font-bold text-cream-800 mb-6">See Cocoo in Action</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto"></div>
+                <p class="text-xl text-cream-600 mt-6">Beautiful, intuitive interface designed for parents by parents</p>
             </div>
             
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-                <article class="log-card bg-white rounded-2xl shadow-xl overflow-hidden card-hover border border-gray-100">
-                    <div class="overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
-                             alt="Prompt Engineering" class="log-image w-full h-64 object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 leading-tight">The Kind of Prompt Engineering People Might Easily Forget—But Really Shouldn't</h3>
-                        <p class="text-gray-600 leading-relaxed">A deep dive into overlooked prompt engineering techniques that improve latency, scalability, and edge-case handling in real-world LLM applications.</p>
-                        <div class="mt-6">
-                            <span class="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer">
-                                Read more
-                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </span>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Timeline View -->
+                <div class="bg-white rounded-3xl p-8 shadow-2xl card-hover">
+                    <div class="bg-cream-100 rounded-2xl p-6 mb-6">
+                        <div class="w-full h-64 bg-gradient-to-b from-cream-200 to-cream-300 rounded-xl flex items-center justify-center">
+                            <div class="text-center">
+                                <div class="w-16 h-16 bg-pink-400 rounded-full flex items-center justify-center mx-auto mb-4">
+                                    <span class="text-2xl text-white">📱</span>
+                                </div>
+                                <h4 class="text-lg font-semibold text-cream-700">Timeline View</h4>
+                                <p class="text-sm text-cream-600">Visual daily schedule</p>
+                            </div>
                         </div>
                     </div>
-                </article>
+                    <h3 class="text-2xl font-bold text-cream-800 mb-4">Daily Timeline</h3>
+                    <p class="text-cream-600 leading-relaxed">Track your baby's entire day with an intuitive timeline view. See sleep periods, feeding times, and diaper changes at a glance with beautiful visual indicators.</p>
+                </div>
                 
-                <article class="log-card bg-white rounded-2xl shadow-xl overflow-hidden card-hover border border-gray-100">
-                    <div class="overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2039&q=80" 
-                             alt="YouTube Transcripts" class="log-image w-full h-64 object-cover">
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-xl font-bold text-gray-900 mb-4 leading-tight">Fetch Youtube Transcripts for Your First LLM Project</h3>
-                        <p class="text-gray-600 leading-relaxed">A step-by-step guide to programmatically retrieve YouTube transcripts—perfect for building your first LLM project with real-world data.</p>
-                        <div class="mt-6">
-                            <span class="inline-flex items-center text-sm font-medium text-indigo-600 hover:text-indigo-500 cursor-pointer">
-                                Read more
-                                <svg class="ml-1 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                </svg>
-                            </span>
+                <!-- Sticker Interface -->
+                <div class="bg-white rounded-3xl p-8 shadow-2xl card-hover">
+                    <div class="bg-cream-100 rounded-2xl p-6 mb-6">
+                        <div class="grid grid-cols-4 gap-3">
+                            <div class="bg-blue-200 rounded-xl p-3 text-center">
+                                <span class="text-2xl">🛌</span>
+                                <p class="text-xs mt-1 text-cream-700">Sleep</p>
+                            </div>
+                            <div class="bg-pink-400 rounded-xl p-3 text-center">
+                                <span class="text-2xl">🤱</span>
+                                <p class="text-xs mt-1 text-white">Feed</p>
+                            </div>
+                            <div class="bg-yellow-300 rounded-xl p-3 text-center">
+                                <span class="text-2xl">💧</span>
+                                <p class="text-xs mt-1 text-cream-700">Pee</p>
+                            </div>
+                            <div class="bg-green-300 rounded-xl p-3 text-center">
+                                <span class="text-2xl">☀️</span>
+                                <p class="text-xs mt-1 text-cream-700">Wake</p>
+                            </div>
                         </div>
                     </div>
-                </article>
+                    <h3 class="text-2xl font-bold text-cream-800 mb-4">Sticker Interface</h3>
+                    <p class="text-cream-600 leading-relaxed">Simple, one-tap tracking with colorful stickers. No complex forms - just tap the activity and you're done. Perfect for busy parents.</p>
+                </div>
+            </div>
+            
+            <!-- Download CTA -->
+            <div class="text-center mt-16">
+                <div class="bg-gradient-to-r from-pink-500 to-pink-600 rounded-3xl p-8 lg:p-12 text-white inline-block">
+                    <h3 class="text-3xl font-bold mb-4">Ready to get started?</h3>
+                    <p class="text-pink-100 mb-6 text-lg">Join thousands of parents already using Cocoo to track their baby's development</p>
+                    <a href="#download" class="bg-white text-pink-500 px-8 py-4 rounded-full text-lg font-semibold hover:bg-pink-50 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center">
+                        Download Cocoo Now
+                        <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8l-8 8-8-8"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Sentra AI Section -->
+    <section id="about" class="py-20 lg:py-32 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl lg:text-5xl font-bold text-cream-800 mb-6">About Sentra AI</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-pink-400 to-pink-600 mx-auto mb-6"></div>
+                <p class="text-xl text-cream-600 max-w-3xl mx-auto leading-relaxed">
+                    We're building the future of AI-powered solutions for families and businesses, starting with Cocoo - our revolutionary baby tracking application.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+                <div>
+                    <h3 class="text-3xl font-bold text-cream-800 mb-6">Our Mission</h3>
+                    <p class="text-cream-600 mb-6 leading-relaxed">
+                        At Sentra AI, we believe technology should make life easier, not more complicated. That's why we're developing Cocoo - a comprehensive baby tracking app that combines expert pediatric knowledge with intelligent automation.
+                    </p>
+                    <p class="text-cream-600 leading-relaxed">
+                        Our team is dedicated to creating solutions that solve real-world problems for modern families, using the latest advances in artificial intelligence and user experience design.
+                    </p>
+                </div>
+                <div class="bg-cream-50 rounded-3xl p-8">
+                    <div class="grid grid-cols-2 gap-6 text-center">
+                        <div>
+                            <div class="text-3xl font-bold text-pink-500 mb-2">7</div>
+                            <div class="text-cream-600">Tracking Stickers</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-pink-500 mb-2">24</div>
+                            <div class="text-cream-600">Months Coverage</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-pink-500 mb-2">AI</div>
+                            <div class="text-cream-600">Powered Analytics</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-bold text-pink-500 mb-2">100%</div>
+                            <div class="text-cream-600">Expert Validated</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <div class="text-center bg-cream-50 rounded-2xl p-6">
+                    <div class="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-white">🧠</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-cream-800 mb-3">AI-Driven Insights</h4>
+                    <p class="text-cream-600">Advanced algorithms analyze patterns to provide personalized recommendations for your baby's development.</p>
+                </div>
+                
+                <div class="text-center bg-cream-50 rounded-2xl p-6">
+                    <div class="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-white">👶</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-cream-800 mb-3">Expert Knowledge</h4>
+                    <p class="text-cream-600">Built on pediatric research and AAP/WHO guidelines to ensure the best care for your little one.</p>
+                </div>
+                
+                <div class="text-center bg-cream-50 rounded-2xl p-6">
+                    <div class="w-16 h-16 bg-pink-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl text-white">💡</span>
+                    </div>
+                    <h4 class="text-xl font-bold text-cream-800 mb-3">Simple Design</h4>
+                    <p class="text-cream-600">Intuitive interface designed specifically for busy parents who need quick, accurate tracking.</p>
+                </div>
+            </div>
+            
+            <!-- Development Status -->
+            <div class="text-center">
+                <div class="bg-gradient-to-r from-pink-500 to-pink-600 rounded-3xl p-8 lg:p-12 text-white">
+                    <h3 class="text-3xl font-bold mb-4">Cocoo is Currently in Development</h3>
+                    <p class="text-pink-100 mb-6 text-lg max-w-2xl mx-auto">
+                        We're putting the finishing touches on Cocoo to ensure it meets the highest standards for accuracy, usability, and reliability that parents deserve.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                        <a href="https://calendly.com/sueye0425/intro-call-with-sue-ai-projects-consulting" target="_blank" class="bg-white text-pink-500 px-8 py-3 rounded-full text-lg font-semibold hover:bg-pink-50 transition-all duration-300 shadow-lg hover:shadow-xl inline-flex items-center">
+                            Contact Sentra AI
+                            <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                        <a href="#features" class="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-pink-500 transition-all duration-300">
+                            Explore Features
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Download Section -->
+    <section id="download" class="py-20 lg:py-32 bg-cream-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-12">
+                <img src="assets/cocoo-logo.png" alt="Cocoo Logo" class="w-20 h-20 mx-auto mb-6">
+                <h2 class="text-4xl lg:text-5xl font-bold text-cream-800 mb-6">Get Cocoo</h2>
+                <p class="text-xl text-cream-600 max-w-2xl mx-auto leading-relaxed">
+                    Start your journey with smarter baby tracking. Get ready to discover how technology can make parenting a little easier.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-3xl p-8 lg:p-12 shadow-xl">
+                <h3 class="text-2xl font-bold text-cream-800 mb-6">Coming Soon to App Stores</h3>
+                <p class="text-cream-600 mb-8">Be the first to know when Cocoo launches. Join our waitlist for early access and exclusive updates.</p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                    <div class="flex items-center bg-black text-white px-6 py-3 rounded-xl opacity-50">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M18.71,19.5C17.88,20.74 17,21.95 15.66,21.97C14.32,22 13.89,21.18 12.37,21.18C10.84,21.18 10.37,21.95 9.1,22C7.79,22.05 6.8,20.68 5.96,19.47C4.25,17 2.94,12.45 4.7,9.39C5.57,7.87 7.13,6.91 8.82,6.88C10.1,6.86 11.32,7.75 12.11,7.75C12.89,7.75 14.37,6.68 15.92,6.84C16.57,6.87 18.39,7.1 19.56,8.82C19.47,8.88 17.39,10.1 17.41,12.63C17.44,15.65 20.06,16.66 20.09,16.67C20.06,16.74 19.67,18.11 18.71,19.5M13,3.5C13.73,2.67 14.94,2.04 15.94,2C16.07,3.17 15.6,4.35 14.9,5.19C14.21,6.04 13.07,6.7 11.95,6.61C11.8,5.46 12.36,4.26 13,3.5Z"/>
+                        </svg>
+                        <div class="text-left">
+                            <div class="text-xs">Download on the</div>
+                            <div class="text-lg font-semibold">App Store</div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex items-center bg-black text-white px-6 py-3 rounded-xl opacity-50">
+                        <svg class="w-8 h-8 mr-3" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.53,12.9 20.18,13.18L17.89,14.5L15.39,12L17.89,9.5L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/>
+                        </svg>
+                        <div class="text-left">
+                            <div class="text-xs">Get it on</div>
+                            <div class="text-lg font-semibold">Google Play</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email for early access" class="w-full px-4 py-3 rounded-xl border border-cream-300 focus:outline-none focus:ring-2 focus:ring-pink-500 mb-4">
+                    <button class="w-full bg-pink-500 text-white px-6 py-3 rounded-xl font-semibold hover:bg-pink-600 transition-all duration-300">
+                        Join Waitlist
+                    </button>
+                </div>
+                
+                <p class="text-sm text-cream-500 mt-4">No spam, just updates on our launch progress</p>
             </div>
         </div>
     </section>
@@ -236,16 +487,16 @@
         }, observerOptions);
 
         // Observe all cards and sections for scroll animations
-        document.querySelectorAll('.service-card, .product-card, .log-card').forEach(el => {
+        document.querySelectorAll('.card-hover').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(30px)';
             el.style.transition = 'opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
             observer.observe(el);
         });
 
-        // Add stagger effect to service cards
-        document.querySelectorAll('.service-card').forEach((el, index) => {
-            el.style.transitionDelay = `${index * 0.2}s`;
+        // Add stagger effect to feature cards
+        document.querySelectorAll('.card-hover').forEach((el, index) => {
+            el.style.transitionDelay = `${index * 0.1}s`;
         });
     </script>
 </body>

@@ -1,24 +1,31 @@
-# Sentra AI Labs
+# Cocoo - Smart Baby Tracking App
 
-Sue Ye's AI consulting company website - showcasing AI-powered products and professional services.
+Developed by Sentra AI - A comprehensive mobile app for modern parents to track their baby's daily activities, sleep patterns, feeding schedules, and developmental milestones.
 
 ## 🚀 Quick Start
 
-This is a static website built with HTML, CSS (Tailwind), and JavaScript. The site features:
+This is a static website built with HTML, CSS (Tailwind), and JavaScript showcasing the Cocoo mobile app. The site features:
 
-- **Products**: TripAIbuddy - AI-powered travel companion
-- **Case Studies**: Technical blog posts and project logs
-- **About**: Sue's professional background and expertise
+- **App Overview**: Complete baby tracking solution with 7-sticker system
+- **Features**: Sleep tracking, feeding logs, diaper changes, developmental milestones
+- **Screenshots**: Visual previews of the mobile app interface
+- **Download**: App store links and waitlist signup (coming soon)
+- **About**: Sentra AI as the development company
 
 ## 📁 Project Structure
 
 ```
 sentra_ai_labs/
 ├── public/
-│   ├── index.html          # Main landing page
-│   ├── meet-sue.html       # About/bio page
+│   ├── index.html          # Cocoo app landing page
+│   ├── meet-sue.html       # About/bio page (legacy)
 │   ├── assets/
-│   │   └── profile_photo.JPG
+│   │   ├── cocoo-logo.png          # Cocoo app logo
+│   │   ├── cocoo-full-logo.png     # Cocoo full logo
+│   │   ├── baby_sleep.png          # App screenshot assets
+│   │   ├── baby_breastfeed.png     # App screenshot assets
+│   │   ├── wakeup_baby.png         # App screenshot assets
+│   │   └── profile_photo.JPG       # Sue's photo (legacy)
 │   └── 404.html
 ├── netlify.toml           # Netlify hosting config
 ├── _redirects             # Netlify redirects
@@ -98,9 +105,26 @@ Then visit `http://localhost:8000`
 ## 🔧 Configuration
 
 - **Netlify**: Configured in `netlify.toml` and `_redirects`
-- **Styling**: Uses Tailwind CSS via CDN
-- **Assets**: Stored in `public/assets/`
+- **Styling**: Uses Tailwind CSS via CDN with Cocoo's warm color palette
+- **Assets**: App logos and screenshots stored in `public/assets/`
+- **Design**: Cream (#F4EAE1) and pink (#E26887) color scheme matching the mobile app
 
-## 📞 Contact
+## 📱 About Cocoo
 
-For questions about this website, contact Sue Ye via the booking link on the site.
+Cocoo is a comprehensive baby tracking mobile app that helps new parents:
+
+- **Track 7 Essential Activities**: Sleep, wake-up, breastfeeding, formula, pee, poop, and combination diaper changes
+- **Expert Sleep Templates**: Age-appropriate schedules for babies 0-24 months based on pediatric guidelines
+- **Timeline Visualization**: Beautiful daily timeline showing all activities at a glance
+- **Developmental Milestones**: Track progress using AAP/WHO standards
+- **Smart Analytics**: Drift analysis and personalized schedule recommendations
+- **Intuitive Interface**: Simple sticker-based tracking designed for tired parents
+
+## 🏢 About Sentra AI
+
+Cocoo is developed by Sentra AI, a company specializing in AI-powered solutions that solve real-world problems. For questions about this website or Sentra AI services, contact Sue Ye via the booking link on the site.
+
+## 🔗 Related Repositories
+
+- [cocoo-frontend-flutter](../cocoo-frontend-flutter/): Flutter mobile app source code
+- [cocoo-backend](../cocoo-backend/): FastAPI backend with expert sleep templates
