@@ -20,83 +20,55 @@ sentra_ai_labs/
 │   ├── assets/
 │   │   └── profile_photo.JPG
 │   └── 404.html
-├── firebase.json           # Firebase hosting config
+├── netlify.toml           # Netlify hosting config
+├── _redirects             # Netlify redirects
 └── README.md
 ```
 
-## 🌐 Deployment Options
+## 🌐 Deployment
 
-### Option 1: Firebase Hosting (Recommended)
+### Netlify Hosting (Current Setup)
 
-Firebase Hosting is already configured for this project.
+This project is configured for deployment on Netlify with automatic builds and optimized caching.
 
-#### Prerequisites
-- [Node.js](https://nodejs.org/) installed
-- [Firebase CLI](https://firebase.google.com/docs/cli) installed
+#### Quick Deploy Options
 
-#### Setup Steps
-
-1. **Install Firebase CLI** (if not already installed):
-   ```bash
-   npm install -g firebase-tools
-   ```
-
-2. **Login to Firebase**:
-   ```bash
-   firebase login
-   ```
-
-3. **Initialize Firebase project** (if not already done):
-   ```bash
-   firebase init hosting
-   ```
-   - Select or create a Firebase project
-   - Choose `public` as your public directory (already configured)
-   - Configure as single-page app: No
-   - Set up automatic builds: No
-
-4. **Deploy to Firebase**:
-   ```bash
-   firebase deploy
-   ```
-
-5. **Your site will be live at**: `https://your-project-id.web.app`
-
-#### Quick Deploy Command
-```bash
-# Deploy with one command
-firebase deploy --only hosting
-```
-
-### Option 2: Netlify
-
-1. **Via Git Integration**:
+1. **Via Git Integration** (Recommended):
    - Connect your GitHub repository to [Netlify](https://netlify.com)
-   - Set build directory to `public`
-   - Deploy automatically on git push
+   - Netlify will automatically detect the `netlify.toml` configuration
+   - Deploy automatically on git push to main branch
 
-2. **Via Drag & Drop**:
+2. **Via Netlify CLI**:
+   ```bash
+   # Install Netlify CLI
+   npm install -g netlify-cli
+   
+   # Login to Netlify
+   netlify login
+   
+   # Deploy to production
+   netlify deploy --prod
+   ```
+
+3. **Via Drag & Drop**:
    - Go to [Netlify](https://netlify.com)
    - Drag the `public` folder to the deploy area
 
-### Option 3: Vercel
+#### Configuration Files
+- `netlify.toml`: Build settings, headers, and redirects
+- `_redirects`: Additional redirect rules
 
-1. **Install Vercel CLI**:
-   ```bash
-   npm install -g vercel
-   ```
+### Alternative Deployment Options
 
-2. **Deploy**:
-   ```bash
-   vercel --prod
-   ```
-   - Set output directory to `public`
+#### Vercel
+```bash
+npm install -g vercel
+vercel --prod
+```
 
-### Option 4: GitHub Pages
-
-1. **Enable GitHub Pages** in your repository settings
-2. **Set source** to `/ (root)` and create an `index.html` in root, or:
-3. **Move contents** of `public/` to root directory
+#### GitHub Pages
+1. Enable GitHub Pages in repository settings
+2. Set source to `/ (root)` or move `public/` contents to root
 
 ## 🛠️ Local Development
 
@@ -125,7 +97,7 @@ Then visit `http://localhost:8000`
 
 ## 🔧 Configuration
 
-- **Firebase**: Configured in `firebase.json`
+- **Netlify**: Configured in `netlify.toml` and `_redirects`
 - **Styling**: Uses Tailwind CSS via CDN
 - **Assets**: Stored in `public/assets/`
 
