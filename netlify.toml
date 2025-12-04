@@ -21,3 +21,7 @@
   from = "/404"
   to = "/404.html"
   status = 404
+
+# Netlify Forms Configuration
+# Email notifications can be configured in the Netlify dashboard
+# Go to: Site settings → Forms → Form notifications
